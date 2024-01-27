@@ -22,6 +22,9 @@ public class RunPlayerController : MonoBehaviour
     public float nextObstacleSpawnPos;
     public Obstacle obstaclePrefab;
 
+    public float nextLoopDist;
+    public float backgroundLoop;
+
     public Slider progressBar;
 
     public CharacterController player;
@@ -59,16 +62,22 @@ public class RunPlayerController : MonoBehaviour
                 progressBar.value = distanceRan / winDist;
             }
             goose.Move(movementDir);
-            background.transform.position = new Vector3(0, 0, transform.position.z);
+            if(distanceRan > nextLoopDist)
+            {
+                background.transform.position = new Vector3(0, 0, nextLoopDist);
+                nextLoopDist += backgroundLoop;
+            }
 
 
             if (Mathf.Abs(player.transform.position.z-goose.transform.position.z) <= gooseCatchDist)
             {
                 controller.Lose();
+                progressBar.gameObject.SetActive(false);
             }
             else if (distanceRan >= winDist)
             {
                 controller.Win();
+                progressBar.gameObject.SetActive(false);
             }
             else if (distanceRan >= nextObstacleSpawnPos)
             {

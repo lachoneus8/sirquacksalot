@@ -13,6 +13,8 @@ public class MinigameController : MonoBehaviour
     public TextMeshProUGUI introText;
     public Image losePanel;
     public TextMeshProUGUI loseText;
+    public TextMeshProUGUI loseTitle;
+    public string failMessage;
     public Image winPanel;
     public string winMessage;
     public TextMeshProUGUI  winText;
@@ -42,7 +44,8 @@ public class MinigameController : MonoBehaviour
     }
     public void Lose()
     {
-        loseText.text = loseMessages[Random.Range(0, loseMessages.Count - 1)];
+        loseText.text = loseMessages[Random.Range(0, loseMessages.Count)];
+        loseTitle.text = failMessage;
         losePanel.gameObject.SetActive(true);
         Time.timeScale = 0f;
         running = false;
@@ -56,7 +59,12 @@ public class MinigameController : MonoBehaviour
     }
     public void LoadMinigame()
     {
-        SceneManager.LoadScene(Random.Range(3, SceneManager.sceneCountInBuildSettings-1));
+        int nextGame = Random.Range(2, SceneManager.sceneCountInBuildSettings);
+        while (nextGame == SceneManager.GetActiveScene().buildIndex)
+        {
+            nextGame = Random.Range(2, SceneManager.sceneCountInBuildSettings);
+        }
+        SceneManager.LoadScene(nextGame);
     }
     IEnumerator Countdown()
     {
