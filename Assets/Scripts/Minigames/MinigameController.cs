@@ -15,12 +15,18 @@ public class MinigameController : MonoBehaviour
     public Image winPanel;
     public string winMessage;
     public TextMeshProUGUI  winText;
+
+    public TextMeshProUGUI countdownText;
+    public GameObject countdownBackground;
+    public bool running;
     // Start is called before the first frame update
     void Start()
     {
         introPanel.gameObject.SetActive(true);
         introText.text = introMessage;
+        Debug.Log(introMessage);
         Time.timeScale = 0f;
+        running = false;
     }
 
     // Update is called once per frame
@@ -30,21 +36,42 @@ public class MinigameController : MonoBehaviour
     }
     public void BeginMinigame()
     {
-        Time.timeScale = 1f;
+        StartCoroutine(Countdown());
         introPanel.gameObject.SetActive(false);
+ 
     }
     public void Lose()
     {
         loseText.text = loseMessages[Random.Range(0, loseMessages.Count - 1)];
         losePanel.gameObject.SetActive(true);
+        Time.timeScale = 0f;
+        running = false;
     }
     public void Win()
     {
         winPanel.gameObject.SetActive(true);
         winText.text = winMessage;
+        Time.timeScale = 0f;
+        running = false;
     }
     public void LoadMinigame()
     {
 
+    }
+    IEnumerator Countdown()
+    {
+        Time.timeScale = 1f;
+        countdownBackground.SetActive(true);
+        countdownText.text = "1!";
+        yield return new WaitForSeconds(1f);
+        countdownText.text = "2!";
+        yield return new WaitForSeconds(1f);
+        countdownText.text = "5!\n(3 sir)\n3!";
+        yield return new WaitForSeconds(1f);
+        countdownText.text = "Go!";
+        yield return new WaitForSeconds(1f);
+        running = true;
+        countdownBackground.SetActive(false);
+        countdownText.text = "";
     }
 }
