@@ -16,6 +16,8 @@ public class MinigameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        introPanel.gameObject.SetActive(true);
+        introText.text = introMessage;
         Time.timeScale = 0f;
     }
 

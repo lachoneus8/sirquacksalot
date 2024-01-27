@@ -8,6 +8,8 @@ public class RunPlayerController : MonoBehaviour
     public float timeAlive;
     public float playerSpeed;
     public float strafeSpeed;
+
+    public CharacterController player;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +28,7 @@ public class RunPlayerController : MonoBehaviour
         {
             movementDir.x -= strafeSpeed * Time.deltaTime;
         }
-        transform.position += movementDir;
+        player.Move(movementDir);
         timeAlive += Time.deltaTime;
     }
 }

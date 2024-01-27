@@ -188,6 +188,7 @@ MonoBehaviour:
     Full of bread"
   - The journey of loaf of bread begins situ a single crumb
   - Keep calm and duck on!
+  - It just so happens that your friend here is mostly dead
   introPanel: {fileID: 1343501053319086716}
   introMessage: 
   introText: {fileID: 6632442232310557020}
