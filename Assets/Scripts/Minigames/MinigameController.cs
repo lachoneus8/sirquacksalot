@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MinigameController : MonoBehaviour
 {
@@ -55,7 +56,7 @@ public class MinigameController : MonoBehaviour
     }
     public void LoadMinigame()
     {
-
+        SceneManager.LoadScene(Random.Range(3, SceneManager.sceneCountInBuildSettings-1));
     }
     IEnumerator Countdown()
     {

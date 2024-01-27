@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RunPlayerController : MonoBehaviour
 {
     public MinigameController controller;
     public float distanceRan;
+    public float winDist;
     public float playerSpeed;
     public float strafeSpeed;
     public float gooseCatchDist;
@@ -17,8 +19,10 @@ public class RunPlayerController : MonoBehaviour
     public float obstacleOffset;//
     public float obstacleBounds;//How far on either side of 0 can the obstacle spawn
     public float obstacleAmount;
-    public float startObstacleAmount;
+    public float nextObstacleSpawnPos;
     public Obstacle obstaclePrefab;
+
+    public Slider progressBar;
 
     public CharacterController player;
     public CharacterController goose;
@@ -28,9 +32,9 @@ public class RunPlayerController : MonoBehaviour
     {
         for(float i = obstacleDist; i <= obstacleOffset; i += obstacleDist)
         {
-            SpawnObstacles(i, startObstacleAmount);
+            SpawnObstacles(i, obstacleAmount);
         }
-        obstacleAmount = startObstacleAmount;
+        nextObstacleSpawnPos = obstacleDist;
     }
 
     // Update is called once per frame
@@ -52,14 +56,24 @@ public class RunPlayerController : MonoBehaviour
                 }
                 player.Move(movementDir);
                 distanceRan += (transform.position.z - oldZ);
+                progressBar.value = distanceRan / winDist;
             }
             goose.Move(movementDir);
             background.transform.position = new Vector3(0, 0, transform.position.z);
 
 
-            if (Vector3.Distance(player.transform.position, goose.transform.position) <= gooseCatchDist)
+            if (Mathf.Abs(player.transform.position.z-goose.transform.position.z) <= gooseCatchDist)
             {
                 controller.Lose();
+            }
+            else if (distanceRan >= winDist)
+            {
+                controller.Win();
+            }
+            else if (distanceRan >= nextObstacleSpawnPos)
+            {
+                nextObstacleSpawnPos += obstacleDist;
+                SpawnObstacles(nextObstacleSpawnPos + obstacleOffset, obstacleAmount);
             }
         }
     }
@@ -70,7 +84,7 @@ public class RunPlayerController : MonoBehaviour
     void SpawnObstacles(float offset,float amount)
     {
         float generateDist = obstacleBounds * 2/amount;
-        for (int i = 0; i < amount; i++)
+        for (int i = 0; i < (int)amount; i++)
         {
             Vector3 spawnPos = new Vector3(Random.Range(-obstacleBounds+(generateDist*i), -obstacleBounds + (generateDist * (i+1))),0,transform.position.y+offset);
             Instantiate(obstaclePrefab,spawnPos,Quaternion.identity);
