@@ -24,7 +24,6 @@ public class MinigameController : MonoBehaviour
     {
         introPanel.gameObject.SetActive(true);
         introText.text = introMessage;
-        Debug.Log(introMessage);
         Time.timeScale = 0f;
         running = false;
     }

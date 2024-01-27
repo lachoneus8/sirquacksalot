@@ -928,6 +928,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7159365334505958002, guid: 4d508daf2f31b454ea8810572d4e51e9, type: 3}
+      propertyPath: winMessage
+      value: You escaped that terrible goose, and found a bread crumb!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159365334505958002, guid: 4d508daf2f31b454ea8810572d4e51e9, type: 3}
       propertyPath: introMessage
       value: You are being chased by the most foul, cruel, and bad-tempered goose
         you ever set eyes on! Use left and right the arrow keys to dodge obstacles,
