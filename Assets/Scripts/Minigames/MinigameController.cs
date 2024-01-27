@@ -13,6 +13,8 @@ public class MinigameController : MonoBehaviour
     public Image losePanel;
     public TextMeshProUGUI loseText;
     public Image winPanel;
+    public string winMessage;
+    public TextMeshProUGUI  winText;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +41,7 @@ public class MinigameController : MonoBehaviour
     public void Win()
     {
         winPanel.gameObject.SetActive(true);
+        winText.text = winMessage;
     }
     public void LoadMinigame()
     {
