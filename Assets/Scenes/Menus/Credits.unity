@@ -384,10 +384,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Arthur Walker - \n\nDavid Stevens -\n\nDamon Stevens - Used some form
-    of magic known as \"programming\". He weighed the same as a duck, and so was
-    burnt at the stake\n\nKelsey Stevens - \n\nLogan -\n\nJon - \n\nLlarry the Llama
-    - Supreme overlord"
+  m_text: "Arthur Walker - He who toils in the pixel mines\n\nDavid Stevens -\n\nDamon
+    Stevens - Used some form of magic known as \"programming\". He weighed the same
+    as a duck, and so was burnt at the stake\n\nKelsey Stevens - She made the bomb,
+    but failed to defuse it. Her last words were: I had a bad feeling about this\n\nLogan
+    - \n\nJon - \n\nLlarry the Llama - Supreme overlord"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -414,7 +415,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.45
+  m_fontSize: 22.85
   m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 1
