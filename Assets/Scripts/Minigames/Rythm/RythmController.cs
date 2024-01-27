@@ -33,7 +33,14 @@ public class RythmController : MonoBehaviour
 
     public GameObject targetLine;
 
+    public MinigameController minigameController;
+
+    public GameObject rythmPanel;
+
     private float nextBeat;
+
+    private int failures = 0;
+    private int successes = 0;
 
     private void Start()
     {
@@ -47,6 +54,13 @@ public class RythmController : MonoBehaviour
 
     void Update()
     {
+        if (!minigameController.running)
+        {
+            return;
+        }
+
+        rythmPanel.gameObject.SetActive(true);
+
         nextBeat -= Time.deltaTime;
 
         if ( nextBeat < 0)
@@ -82,5 +96,26 @@ public class RythmController : MonoBehaviour
     private void HandleBeatScored(int lane, BeatController.BeatScore score)
     {
         beatQueues[lane].Dequeue();
+
+        if (score == BeatController.BeatScore.Failed)
+        {
+            failures++;
+        }
+        else
+        {
+            successes++;
+        }
+
+        if (failures >= 3)
+        {
+            rythmPanel.gameObject.SetActive(false);
+            minigameController.Lose();
+        }
+
+        if (successes >= 5)
+        {
+            rythmPanel.gameObject.SetActive(false);
+            minigameController.Win();
+        }
     }
 }

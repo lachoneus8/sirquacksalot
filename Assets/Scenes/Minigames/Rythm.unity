@@ -306,14 +306,13 @@ GameObject:
   - component: {fileID: 319712423}
   - component: {fileID: 319712425}
   - component: {fileID: 319712424}
-  - component: {fileID: 319712426}
   m_Layer: 5
   m_Name: RythmPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &319712423
 RectTransform:
   m_ObjectHideFlags: 0
@@ -379,13 +378,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 319712422}
   m_CullTransparentMesh: 1
---- !u!114 &319712426
+--- !u!1 &366511249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 366511251}
+  - component: {fileID: 366511250}
+  m_Layer: 0
+  m_Name: RythmController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &366511250
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319712422}
+  m_GameObject: {fileID: 366511249}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0ad8ca24a58a8d42a2fe4f71c53b2b5, type: 3}
@@ -406,66 +422,15 @@ MonoBehaviour:
   - {fileID: 93710149}
   beatSpawnCountdown: 3
   targetLine: {fileID: 1859453383}
---- !u!1 &462208043
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 462208046}
-  - component: {fileID: 462208045}
-  - component: {fileID: 462208044}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &462208044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 462208043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &462208045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 462208043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!4 &462208046
+  minigameController: {fileID: 1945277979}
+  rythmPanel: {fileID: 319712422}
+--- !u!4 &366511251
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 462208043}
+  m_GameObject: {fileID: 366511249}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -846,6 +811,77 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 967958309}
   m_CullTransparentMesh: 1
+--- !u!1001 &1191861301
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 728013956497322928, guid: 4d508daf2f31b454ea8810572d4e51e9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 728013956497322928, guid: 4d508daf2f31b454ea8810572d4e51e9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 728013956497322928, guid: 4d508daf2f31b454ea8810572d4e51e9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 728013956497322928, guid: 4d508daf2f31b454ea8810572d4e51e9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 728013956497322928, guid: 4d508daf2f31b454ea8810572d4e51e9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 728013956497322928, guid: 4d508daf2f31b454ea8810572d4e51e9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 728013956497322928, guid: 4d508daf2f31b454ea8810572d4e51e9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 728013956497322928, guid: 4d508daf2f31b454ea8810572d4e51e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 728013956497322928, guid: 4d508daf2f31b454ea8810572d4e51e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 728013956497322928, guid: 4d508daf2f31b454ea8810572d4e51e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326933059775129576, guid: 4d508daf2f31b454ea8810572d4e51e9, type: 3}
+      propertyPath: m_Name
+      value: MinigameController
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159365334505958002, guid: 4d508daf2f31b454ea8810572d4e51e9, type: 3}
+      propertyPath: winMessage
+      value: '"I knew I had a bad feeling about him"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159365334505958002, guid: 4d508daf2f31b454ea8810572d4e51e9, type: 3}
+      propertyPath: failMessage
+      value: Defeated by the evil Goose, you say one last time "Noooooooooo, that's
+        impossible!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159365334505958002, guid: 4d508daf2f31b454ea8810572d4e51e9, type: 3}
+      propertyPath: introMessage
+      value: You see the evil Goose before you.  He says "I am your father".  Defend
+        yourself!  Use arrow keys with right timing to block attacks.
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4d508daf2f31b454ea8810572d4e51e9, type: 3}
 --- !u!1 &1645810052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,6 +1142,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859453383}
   m_CullTransparentMesh: 1
+--- !u!114 &1945277979 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7159365334505958002, guid: 4d508daf2f31b454ea8810572d4e51e9, type: 3}
+  m_PrefabInstance: {fileID: 1191861301}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa90051024e4fb447aeec62aa5ca12aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2660060723041897906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1226,7 +1273,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 963194228}
   - {fileID: 705507995}
+  - {fileID: 1191861301}
   - {fileID: 6582810178716713984}
   - {fileID: 2660060723041897906}
   - {fileID: 20193847}
-  - {fileID: 462208046}
+  - {fileID: 366511251}
