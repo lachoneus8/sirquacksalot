@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigames/Swamp.unity
     guid: 66822c650558ebd4382cee208ab5428d
+  - enabled: 1
+    path: Assets/Scenes/Minigames/WhackAGoose.unity
+    guid: 7b0cb96f397c7ca4dafa776eb9dba07d
   m_configObjects: {}

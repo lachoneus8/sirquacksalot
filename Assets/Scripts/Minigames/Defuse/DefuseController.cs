@@ -62,15 +62,19 @@ public class DefuseController : MonoBehaviour
                 StartCoroutine(SpawnWater(waterAnchor.position));
                 if (Physics.Raycast(playerPos.position, playerPos.forward, out waterGunHit))
                 {
-                    var hitBomb=waterGunHit.rigidbody.GetComponent<Bomb>();
-                    if (hitBomb != null)
+                    if(waterGunHit.rigidbody!=null)
                     {
-                        hitBomb.Defuse();
-                        if (bombAmount <= 0)
+                        var hitBomb = waterGunHit.rigidbody.GetComponent<Bomb>();
+                        if (hitBomb != null)
                         {
-                            controller.Win();
+                            hitBomb.Defuse();
+                            if (bombAmount <= 0)
+                            {
+                                controller.Win();
+                                waterSlider.gameObject.SetActive(false);
+                            }
+                            StartCoroutine(SpawnWater(waterGunHit.point));
                         }
-                        StartCoroutine(SpawnWater(waterGunHit.point));
                     }
                 }
             }

@@ -45,6 +45,7 @@ public class RunPlayerController : MonoBehaviour
     {
         if (controller.running)
         {
+            progressBar.gameObject.SetActive(true);
             float oldZ=player.transform.position.z;
             var movementDir = new Vector3(0, 0, Time.deltaTime * playerSpeed);
             if(!stunned )

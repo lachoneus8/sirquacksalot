@@ -39,5 +39,6 @@ public class Bomb : MonoBehaviour
     {
         yield return new WaitForSeconds(controller.bombIgnitionTime);
         controller.controller.Lose();
+        controller.waterSlider.gameObject.SetActive(false);
     }
 }
