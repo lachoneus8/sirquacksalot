@@ -377,14 +377,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sir quackslatot''s extremely epic quest in search of THE LEGENDARY LOST
+  m_text: 'Sir Quackslatot''s extremely epic quest in search of THE LEGENDARY LOST
     LOAF OF BREAD which has been rumored to be divided through the far reaches of
     the wet, massive land of Pondia.  Sir Duckington thought he found THE LEGENDARY
     LOST LOAF OF BREAD last Tuesday, but it was actually just a cracker.   Sir Quacksalot
     must now search across all of the wet, massive land of Pondia for THE LEGENDARY
     LOST LOAF OF BREAD. Containing Sir Quacksalot''s epic battles of wit and might.
     Sir Duckington has tried to join, but Sir Quacksalot will not deal with his filth
-    and so Sir Duckington was instead been sacked. Sir Quacksalot must be aware of
+    and so Sir Duckington has instead been sacked. Sir Quacksalot must be aware of
     the nefarious geese. Peace was never an option with them. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
