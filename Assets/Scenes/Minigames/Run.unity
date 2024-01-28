@@ -908,7 +908,11 @@ MonoBehaviour:
   obstacleBounds: 11
   obstacleAmount: 4
   nextObstacleSpawnPos: 0
-  obstaclePrefab: {fileID: 6427903962868176023, guid: 42143e2e07ac1b1438fd00c45e78119e, type: 3}
+  obstaclePrefabs:
+  - {fileID: 6427903962868176023, guid: 42143e2e07ac1b1438fd00c45e78119e, type: 3}
+  - {fileID: 6427903962868176023, guid: c926428a27c5ddf47b282a74489c8f5b, type: 3}
+  - {fileID: 6427903962868176023, guid: 5fcaa0539d10d87438e02cf75991b080, type: 3}
+  - {fileID: 6427903962868176023, guid: 4ae2a32c057f2614cb6a009495b1f9a7, type: 3}
   nextLoopDist: 5
   backgroundLoop: 5
   progressBar: {fileID: 1266856986}

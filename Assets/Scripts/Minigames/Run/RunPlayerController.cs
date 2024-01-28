@@ -20,7 +20,7 @@ public class RunPlayerController : MonoBehaviour
     public float obstacleBounds;//How far on either side of 0 can the obstacle spawn
     public float obstacleAmount;
     public float nextObstacleSpawnPos;
-    public Obstacle obstaclePrefab;
+    public List<Obstacle> obstaclePrefabs;
 
     public float nextLoopDist;
     public float backgroundLoop;
@@ -96,7 +96,8 @@ public class RunPlayerController : MonoBehaviour
         for (int i = 0; i < (int)amount; i++)
         {
             Vector3 spawnPos = new Vector3(Random.Range(-obstacleBounds+(generateDist*i), -obstacleBounds + (generateDist * (i+1))),0,transform.position.y+offset);
-            Instantiate(obstaclePrefab,spawnPos,Quaternion.identity);
+            int obstacleIndex = UnityEngine.Random.Range(0, obstaclePrefabs.Count);
+            Instantiate(obstaclePrefabs[obstacleIndex],spawnPos,Quaternion.identity);
         }
     }
 
