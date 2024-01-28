@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigames/Defuse.unity
     guid: d7518beed68a1204e92705b218b0835a
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Swamp.unity
+    guid: 66822c650558ebd4382cee208ab5428d
   m_configObjects: {}

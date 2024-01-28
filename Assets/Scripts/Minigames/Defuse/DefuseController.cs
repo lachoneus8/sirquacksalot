@@ -70,8 +70,8 @@ public class DefuseController : MonoBehaviour
                         {
                             controller.Win();
                         }
+                        StartCoroutine(SpawnWater(waterGunHit.point));
                     }
-                    StartCoroutine(SpawnWater(waterGunHit.point));
                 }
             }
             bombTime += Time.deltaTime;
