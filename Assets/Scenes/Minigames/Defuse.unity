@@ -1078,7 +1078,7 @@ MonoBehaviour:
   controller: {fileID: 213238499}
   playerPos: {fileID: 909649286}
   bombDelay: 5
-  bombIgnitionTime: 1
+  bombIgnitionTime: 2
   bombAmount: 5
   bombDist: 7
   shotsLeft: 6
