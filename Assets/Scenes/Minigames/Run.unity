@@ -304,6 +304,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 652031247}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!143 &688617197 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: -4332301365275263485, guid: eaad84a11d04a39468a3fcfa60e51f78, type: 3}
+  m_PrefabInstance: {fileID: 1510594341}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,6 +792,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472767937}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1510594341
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8137496390770517891, guid: eaad84a11d04a39468a3fcfa60e51f78, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137496390770517891, guid: eaad84a11d04a39468a3fcfa60e51f78, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.201
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137496390770517891, guid: eaad84a11d04a39468a3fcfa60e51f78, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137496390770517891, guid: eaad84a11d04a39468a3fcfa60e51f78, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137496390770517891, guid: eaad84a11d04a39468a3fcfa60e51f78, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137496390770517891, guid: eaad84a11d04a39468a3fcfa60e51f78, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137496390770517891, guid: eaad84a11d04a39468a3fcfa60e51f78, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137496390770517891, guid: eaad84a11d04a39468a3fcfa60e51f78, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137496390770517891, guid: eaad84a11d04a39468a3fcfa60e51f78, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137496390770517891, guid: eaad84a11d04a39468a3fcfa60e51f78, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8881983617082774919, guid: eaad84a11d04a39468a3fcfa60e51f78, type: 3}
+      propertyPath: m_Name
+      value: KillerGoose
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eaad84a11d04a39468a3fcfa60e51f78, type: 3}
 --- !u!1 &1562159355
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,7 +913,7 @@ MonoBehaviour:
   backgroundLoop: 5
   progressBar: {fileID: 1266856986}
   player: {fileID: 1562159358}
-  goose: {fileID: 1993888859}
+  goose: {fileID: 688617197}
   background: {fileID: 1884930292}
 --- !u!143 &1562159358
 CharacterController:
@@ -1122,68 +1184,6 @@ Transform:
   - {fileID: 652031248}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1993888857
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8137496390770517891, guid: 53ef33ce4626aef4cb517d0a6b485ab9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8137496390770517891, guid: 53ef33ce4626aef4cb517d0a6b485ab9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8137496390770517891, guid: 53ef33ce4626aef4cb517d0a6b485ab9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 8137496390770517891, guid: 53ef33ce4626aef4cb517d0a6b485ab9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8137496390770517891, guid: 53ef33ce4626aef4cb517d0a6b485ab9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8137496390770517891, guid: 53ef33ce4626aef4cb517d0a6b485ab9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8137496390770517891, guid: 53ef33ce4626aef4cb517d0a6b485ab9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8137496390770517891, guid: 53ef33ce4626aef4cb517d0a6b485ab9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8137496390770517891, guid: 53ef33ce4626aef4cb517d0a6b485ab9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8137496390770517891, guid: 53ef33ce4626aef4cb517d0a6b485ab9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8881983617082774919, guid: 53ef33ce4626aef4cb517d0a6b485ab9, type: 3}
-      propertyPath: m_Name
-      value: KillerGoose
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 53ef33ce4626aef4cb517d0a6b485ab9, type: 3}
---- !u!143 &1993888859 stripped
-CharacterController:
-  m_CorrespondingSourceObject: {fileID: 6134653642737906385, guid: 53ef33ce4626aef4cb517d0a6b485ab9, type: 3}
-  m_PrefabInstance: {fileID: 1993888857}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1996555924
 GameObject:
   m_ObjectHideFlags: 0
@@ -1486,7 +1486,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 705507995}
-  - {fileID: 1993888857}
+  - {fileID: 1510594341}
   - {fileID: 1562159356}
   - {fileID: 8700888691398139619}
   - {fileID: 1884930292}
